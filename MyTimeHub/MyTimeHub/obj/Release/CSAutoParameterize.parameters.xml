@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="MyTimeHubDBContext-Web.config Connection String" description="MyTimeHubDBContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=MyTimeHubDBContext;Integrated Security=SSPI;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\pasca\\Documents\\Teko\\git\\MyTimeHub\\MyTimeHub\\MyTimeHub\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MyTimeHubDBContext']/@connectionString" />
+  </parameter>
+</parameters>

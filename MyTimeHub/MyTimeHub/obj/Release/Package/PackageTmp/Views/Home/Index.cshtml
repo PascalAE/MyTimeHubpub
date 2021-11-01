@@ -1,0 +1,145 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<style>
+    .fc-event {
+        background-color: #FFBEBE !important;
+    }
+    body {
+        margin-top: 40px;
+        text-align: center;
+        font-size: 14px;
+        font-family: "Helvetica Nueue",Arial,Verdana,sans-serif;
+        background-color: #DDDDDD;
+    }
+
+    #wrap {
+        /* width: 1100px; */
+        margin: 0 auto;
+    }
+
+    #external-events {
+        float: left;
+        width: 150px;
+        padding: 0 10px;
+        text-align: left;
+    }
+
+    #external-events h4 {
+        font-size: 16px;
+        margin-top: 0;
+        padding-top: 1em;
+    }
+
+    .external-event { /* try to mimick the look of a real event */
+        margin: 10px 0;
+        padding: 2px 4px;
+        background: #3366CC;
+        color: #fff;
+        font-size: .85em;
+        cursor: pointer;
+    }
+
+    #external-events p {
+        margin: 1.5em 0;
+        font-size: 11px;
+        color: #666;
+    }
+
+    #external-events p input {
+        margin: 0;
+        vertical-align: middle;
+    }
+
+    #calendar {
+        /* 		float: right; */
+        margin: 0 auto;
+        /*width: 900px; */
+        background-color: #FFFFFF;
+        border-radius: 6px;
+        box-shadow: 0 1px 2px #C3C3C3;
+    }
+
+    .fc-week .fc-day:hover .fc-day-number {
+        min-width: 30px;
+    }
+
+    .employee {
+        margin: auto;
+    }
+
+    .infopanel {
+        height: 100px;
+    }
+</style>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Choose Employee
+            </div>
+            <div class="dropdown infopanel panel-body">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <select class="employee form-control valid" id="CustomerID" name="CustomerID" aria-invalid="false">
+                        </select>
+                        <span class="field-validation-valid text-danger" data-valmsg-for="CustomerID" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+               
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+               Saldo 
+            </div>
+            <div class="infopanel panel-body">
+                <h1>0.00</h1>
+            </div>
+            <div class="panel-footer">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id='wrap'>
+
+    <div id='calendar'></div>
+
+    <div style='clear:both'></div>
+
+
+    <!--<div class="jumbotron">
+        <h1>ASP.NET</h1>
+        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+        <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Getting started</h2>
+            <p>
+                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                enables a clean separation of concerns and gives you full control over markup
+                for enjoyable, agile development.
+            </p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Get more libraries</h2>
+            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Web Hosting</h2>
+            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        </div>
+    </div>-->

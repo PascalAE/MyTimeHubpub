@@ -1,0 +1,73 @@
+﻿@model IEnumerable<MyTimeHub.Models.Booking>
+
+@{
+    ViewBag.Title = "All Bookings";
+}
+
+<h2>@ViewBag.Title</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </th>
+        <th>
+            Customer
+        </th>
+        <th>
+            Employee
+        </th>
+        <th>
+            Service type
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Description)
+    </td>
+    <td>
+        @item.Date.ToString("dd.MM.yyyy")
+    </td>
+    <td>
+        @item.StartDate.ToString("hh:mm")
+    </td>
+    <td>
+        @item.EndDate.ToString("hh:mm")
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Customer.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Employee.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ServiceType.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.IsActive)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+        @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+    </td>
+</tr>
+}
+
+</table>
